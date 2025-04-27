@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Explore Kashmir Packages</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="font-roboto bg-gray-100">
+    <!-- Trigger Button -->
+    <button id="openModal" class="bg-blue-500 text-white px-4 py-2 rounded mt-4 ml-4">Open Popup</button>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white w-full md:w-3/4 lg:w-2/3 xl:w-1/2 rounded-lg overflow-hidden">
+            <div class="flex flex-col md:flex-row">
+                <!-- Left Section -->
+                <div class="relative w-full md:w-1/2 h-screen md:h-auto bg-cover bg-center" style="background-image: url('https://i.pinimg.com/736x/09/61/5f/09615f271eb5e3065c65d3760e5f6e07.jpg');">
+                    <div class="absolute inset-0 bg-black opacity-50"></div>
+                    <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+                        <h1 class="text-4xl font-bold mb-2">Explore <span class="text-orange-500">Kashmir</span> Packages</h1>
+                        <div class="flex items-center justify-center mb-4">
+                            <img alt="Kashmir Tour Logo" class="w-24 h-24 rounded-full" height="100" src="https://storage.googleapis.com/a1aa/image/1iEjAffLOYqavUnJcaItY5GEOLnDmT26AA1LDecnFEJYIbZnA.jpg" width="100"/>
+                        </div>
+                        <div class="flex items-center justify-center mb-4">
+                            <div class="flex items-center justify-center w-16 h-16 bg-white rounded-full">
+                                <i class="fas fa-phone-alt text-blue-500 text-2xl"></i>
+                            </div>
+                            <div class="flex items-center justify-center w-16 h-16 bg-white rounded-full mx-4">
+                                <i class="fas fa-plane text-blue-500 text-2xl"></i>
+                            </div>
+                            <div class="flex items-center justify-center w-16 h-16 bg-white rounded-full">
+                                <i class="fas fa-hotel text-blue-500 text-2xl"></i>
+                            </div>
+                        </div>
+                        <div class="text-2xl font-bold mb-4">8470872347</div>
+                        <div class="flex items-center justify-center bg-green-500 text-white px-4 py-2 rounded-full">
+                            <i class="fab fa-whatsapp text-2xl mr-2"></i>
+                            <span>Discuss On WhatsApp</span>
+                        </div>
+                        <div class="text-2xl font-bold mt-2">91-8470872347</div>
+                    </div>
+                </div>
+                <!-- Right Section -->
+                <div class="w-full md:w-1/2 bg-white p-8">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-2xl font-bold">Where Do You Want To Go ?</h2>
+                        <button id="closeModal" class="bg-red-500 text-white px-4 py-2 rounded">Close</button>
+                    </div>
+                    <form>
+                        <div class="mb-4">
+                            <label class="block text-gray-700" for="name">Name</label>
+                            <input class="w-full px-4 py-2 border rounded" id="name" placeholder="Enter Your Name" type="text"/>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700" for="email">Email</label>
+                            <input class="w-full px-4 py-2 border rounded" id="email" placeholder="Enter Your Email" type="email"/>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700" for="mobile">Mobile No</label>
+                            <div class="flex items-center">
+                                <img alt="India Flag" class="mr-2" height="20" src="https://storage.googleapis.com/a1aa/image/aOE5lh0CvTIZEpoFfaZiMkhVHjQaMQ34i6eCU6P2GmYOktsTA.jpg" width="20"/>
+                                <input class="w-full px-4 py-2 border rounded" id="mobile" placeholder="10 digit mobile number" type="text"/>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700" for="date">Date Of Travel</label>
+                            <input class="w-full px-4 py-2 border rounded" id="date" placeholder="dd-mm-yyyy" type="text"/>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700" for="message">Message</label>
+                            <textarea class="w-full px-4 py-2 border rounded" id="message" placeholder="Write a description of your tour so we can design the best package for you!"></textarea>
+                        </div>
+                        <button class="w-full bg-blue-500 text-white px-4 py-2 rounded" type="submit">SEND ME DETAILS</button>
+                    </form>
+                    <div class="mt-4 text-gray-700">
+                        <p class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            We assure the privacy of your contact data.
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            This data will only be used by our team to contact you
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('openModal').addEventListener('click', function() {
+            document.getElementById('modal').classList.remove('hidden');
+        });
+
+        document.getElementById('closeModal').addEventListener('click', function() {
+            document.getElementById('modal').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>

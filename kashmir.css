@@ -1,0 +1,329 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+  }
+header {
+    background-color: #3333332a;
+    padding: 10px 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    margin-left: 65%;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.logo {
+    
+    text-align: center;
+    margin-right: 75%;
+    height: 15px;
+}
+
+/* Hero Section */
+.hero {
+    /* background-image: url('https://www.holidaymonk.com/wp-content/uploads/2023/05/Travel-Guide-to-Vietnam.jpg'); */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #ff6700;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #e65c00;
+}
+
+/* Toggle Button for Mobile */
+.toggle-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: rgba(51, 51, 51, 0.85);
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .toggle-menu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links li {
+        margin: 15px 0;
+    }
+}
+
+
+/* Packages Section */
+.packages {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.packages h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.package-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.package {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+.package img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.package h3 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.package p {
+    margin-bottom: 20px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-icons {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    text-decoration: underline;
+}
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    /* Hero Section */
+    .hero h1 {
+        font-size: 32px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+
+    /* Package Section */
+    .package-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .package {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Hero Section */
+    .hero h1 {
+        font-size: 24px;
+    }
+    .hero p {
+        font-size: 14px;
+    }
+
+    /* Navigation */
+    .nav-links li {
+        margin: 0 10px;
+    }
+}
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    margin-bottom: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial blockquote {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+/* Newsletter Section */
+.newsletter {
+    padding: 50px 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.newsletter-form input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    background-color: #ff6700;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+/* Scroll to Top Button */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #ff6700;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    display: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.scroll-top:hover {
+    background-color: #e65c00;
+}
+.map{
+    background-color: #333;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding-left: 30%;
+}

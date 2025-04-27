@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kashmir Tour</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="kashmir1.css">
+</head>
+<body>
+
+ 
+   
+ 
+
+
+
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo"><img src="image.png" alt="Adventure Travel Logo"></div>
+            <div class="toggle-menu" aria-label="Toggle menu" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="about.html" target_main>About</a></li>
+                <li><a href="#social-icons">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <video autoplay muted loop id="myVideo">
+                <source src="av.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <h1>Book Your Kashmir Tour for a Magical Snowy Escape!</h1>
+            <p>Revel in the joy of fresh snowfall this week as you explore the picturesque landscapes and experience the magic of winter. Hurry and book your dream getaway now for an unforgettable adventure in the heart of snow-laden paradise!</p>
+            <a href="#packages" class="btn">Explore Now</a>
+        </div>
+    </section>
+
+
+    <!-- live counter -->
+    <div class="counter-section">
+        <div class="counter-item">
+            <span class="counter" data-target="20">0</span>+
+            <p>Years of Excellence</p>
+        </div>
+        <div class="counter-item">
+            <span class="counter" data-target="10000">0</span>+
+            <p>Happy Customers</p>
+        </div>
+        <div class="counter-item">
+            <span class="counter" data-target="100">0</span>+
+            <p>Premium Properties</p>
+        </div>
+        <div class="counter-item">
+            <span class="counter" data-target="50">0</span>+
+            <p>Our Ground Team</p>
+        </div>
+    </div>
+    
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+        const updateCounter = () => {
+            const target = +counter.getAttribute('data-target');
+            const current = +counter.innerText;
+            const increment = target / 100; // Adjust speed by changing 100
+
+            if (current < target) {
+                counter.innerText = Math.ceil(current + increment);
+                setTimeout(updateCounter, 100); // Adjust delay by changing 30
+            } else {
+                counter.innerText = target;
+            }
+        };
+        updateCounter();
+    });
+});
+
+</script>
+
+<!-- Packages Section -->
+<section id="packages" class="packages py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Our Packages</h2>
+        <div id="packageCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Package 1 -->
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center">
+                        <div class="package text-center">
+                            <img src="https://d3r8gwkgo0io6y.cloudfront.net/upload/KB/KAshmir.jpg" class="img-fluid" alt="Package 1">
+                            <h3>All Of Kashmir With Radisson</h3>
+                            <p>Srinagar, Sonmarg, Pahalgam, Chandanwari, Gulmarg, Khilanmar
+                                (Affarwat), Departure from Srinagar </p>
+                            <button class="btn btn-primary"><a href="package1.html" target="_main" class="btn btn-primary">Book Now</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Package 2 -->
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="package text-center">
+                            <img src="https://d3r8gwkgo0io6y.cloudfront.net/upload/KD/House-Boat.jpg" class="img-fluid" alt="Package 2">
+                            <h3>Delightfull Kashmir</h3>
+                            <p>Srinagar | Gulmarg | Pahalgam | Sonmarg | Local Sightseeing</p>
+                            <button class="btn btn-primary"><a href="package2.html" target="_main" class="btn btn-primary">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Package 3 -->
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="package text-center">
+                            <img src="https://d3r8gwkgo0io6y.cloudfront.net/upload/KE.jpg" class="img-fluid" alt="Package 3">
+                            <h3>Kashmir Honeymoon</h3>
+                            <p>Srinagar, Sonmarg, Pahalgam, Chandanwari, Gulmarg, Khilanmar
+                                (Affarwat), Departure from Srinagar</p>
+                            <button class="btn btn-primary"><a href="package3.html" target="_main" class="btn btn-primary">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Package 4 -->
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="package text-center">
+                            <img src="https://d3r8gwkgo0io6y.cloudfront.net/upload/KI/aru-valley.jpg" class="img-fluid" alt="Package 4">
+                            <h3>Magical Kashmir Economy
+                            </h3>
+                            <p>Srinagar | Pahalgam | Gulmarg | Sonmarg</p>
+                            <button class="btn btn-primary"><a href="package4.html" target="_main" class="btn btn-primary">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Package 5
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="package text-center">
+                            <img src="https://kashmirtourism.info/wp-content/uploads/2023/01/thajiwas-glacier-sonmarg1.jpg" class="img-fluid" alt="Package 5">
+                            <h3>Paradise Kashmir Package</h3>
+                            <p>Srinagar | Pahalgam | Gulmarg | Sonmarg</p>
+                            <button class="btn btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             -->
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#packageCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#packageCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+    
+<!-- GALLERY SECTION -->
+    <section id="gallery" class="gallery py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Photo Gallery</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://i.pinimg.com/736x/8f/7b/d0/8f7bd00f17ff13c418a96c7a3914108b.jpg" class="img-fluid rounded" alt="Image 1">
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://www.packages.tripscript.in/wp-content/uploads/2022/10/gulmarg-tour-package-300x268.jpg" class="img-fluid rounded" alt="Image 2">
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="           https://i.pinimg.com/736x/cb/69/e6/cb69e64e8db8f181eee5eb5f8d197d1d.jpg     " class="img-fluid rounded" alt="Image 3">
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://www.packages.tripscript.in/wp-content/uploads/2022/10/kashmir-tour-special-package-300x200.jpg" class="img-fluid rounded" alt="Image 4">
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://www.packages.tripscript.in/wp-content/uploads/2022/10/saffron-300x200.jpg" class="img-fluid rounded" alt="Image 5">
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://www.packages.tripscript.in/wp-content/uploads/2022/10/kashmir-special-package-300x199.jpg" class="img-fluid rounded" alt="Image 6">
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://www.packages.tripscript.in/wp-content/uploads/2022/10/kashmir-tour-300x200.jpg" class="img-fluid rounded" alt="Image 7">
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://static.wanderon.in/wp-content/uploads/2024/09/best-places-to-visit-in-kashmir-in-may.jpg" class="img-fluid rounded" alt="Image 9">
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://live.staticflickr.com/8632/16147040338_dc11e2bb49_b.jpg" class="img-fluid rounded" alt="Image 9">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+   <!-- Testimonials Section -->
+<section id="testimonials" class="testimonials">
+    <h2>What Our Travelers Say</h2>
+    <div class="testimonial-container">
+        <div class="testimonial">
+            <img src="https://www.travelhomekashmir.com/kashmir-tour-package/wp-content/uploads/2023/09/ChIJV64yijGP4TgRhF746smwrM8_4ac34d0f6c810db1c63fd189080b4544.jpg" alt="Priya">
+            <blockquote>"Great service by Kashmir Tour. Thank you Rayees sir. Can depend the responsive team (especially Ms. Farah) for clarity. Hotel accommodation and food were excellent comparing the package rate. Thank you once again. "</blockquote>
+            <p>- Priya</p>
+        </div>
+        <div class="testimonial">
+            <img src="https://www.travelhomekashmir.com/kashmir-tour-package/wp-content/uploads/2023/09/ChIJV64yijGP4TgRhF746smwrM8_fa24fdd881e1f03553d29c08733c1cbb.jpg" alt="Prachi Patil">
+            <blockquote>"We are finally back home from our trip and I would like to thank Safaa from "Adventure Travel" for organizing our trip considering all our requirements. We had a wonderful time at every destination and the hotels that we stayed in were very nice indeed. Hotel staff were kind and approachable.Drivers were good and careful and we had smooth transfers.Driver which was assigned to us for the last 3 days of our trip was very protective towards my mom considering her health issues .Once again, many thanks to Safaa and team for making such a trip possible.I will definitely recommend "Kashmir Tour" to my friends who are also planning trips to Kashmir."</blockquote>
+            <p>- Prachi Patil</p>
+        </div>
+        <div class="testimonial">
+            <img src="https://www.kashmirtourpackage.org/kashmir-package/reviews/r2.png" alt="Ankita Sonker">
+            <blockquote>"The trip went really Smooth. All thanks to the team of kashmir tour for coordinating. and understanding our requirements really well. Happy with my stay."</blockquote>
+            <p>- Ankita Sonker</p>
+        </div>
+    </div>
+</section>  
+
+
+
+
+    <!-- Newsletter Signup Section -->
+    <section id="newsletter" class="newsletter">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get the latest travel deals and updates right in your inbox!</p>
+        <form class="newsletter-form" onsubmit="return validateForm()">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Map Section -->
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3304.5272949784794!2d74.819502!3d34.08163!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e18f318a32ae57%3A0xcfacb0c9eaf85e84!2sTravel%20Home%20Kashmir!5e0!3m2!1sen!2sin!4v1727491195882!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Scroll-to-Top Button -->
+    <a href="#" class="scroll-top" id="scrollTopButton" aria-label="Scroll to top">&#8679;</a>
+
+    <!-- Footer Section -->
+    <footer>
+        <section id="social-icons" class="social-icons py-5"></section>
+        <section class="social-icons">
+            <div>
+                <a href="https://www.facebook.com/" target="_main"><img src="https://cdn.pixabay.com/photo/2021/06/15/12/51/facebook-6338507_1280.png" alt="Facebook" height="40"></a>
+                <a href="https://www.instagram.com/" target="_main"><img src="https://img.freepik.com/free-vector/instagram-background-gradient-colors_23-2147823814.jpg" alt="Instagram" height="40"></a>
+                <a href="https://x.com/" target="_main"><img src="https://img.freepik.com/premium-vector/twitter-new-logo-twitter-icons-new-twitter-logo-x-2023_929078-218.jpg" alt="Twitter" height="40"></a>
+            </div>
+        </section>
+        <section class="contact-details">
+            <p><strong>Contact Us:</strong></p>
+            <p>Email: info@kashmirtour.com</p>
+            <p>Phone: +91-9876543210</p>
+            <p>Address: 123, Kashmir Street, Srinagar, Jammu & Kashmir</p>
+        </section>
+        <p>&copy; 2024 Adventure Travel. All Rights Reserved.</p>
+        
+    </footer>
+
+
+
+    <!--call button  -->
+    <div class="call-button">
+        <a href="tel:+919716108811">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    </div>
+    
+
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        }
+        // Scroll to top functionality
+        const scrollTopButton = document.getElementById('scrollTopButton');
+        window.addEventListener('scroll', () => {
+            scrollTopButton.style.display = window.scrollY > 200 ? 'block' : 'none';
+        });
+    </script>
+        <!-- Bootstrap JS & Dependencies -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    
+</body>
+</html>

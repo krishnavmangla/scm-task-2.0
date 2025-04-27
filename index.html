@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Adventure Travel Landing Page</title>
+    <link rel="stylesheet" href="kashmir.css">
+    <!-- Add in header section -->
+<div class="toggle-menu" onclick="toggleMenu()">☰</div>
+
+</head>
+<script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    }
+</script>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo"><img src="image.png"></div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <video autoplay muted loop id="myVideo">
+                <source src="av.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+            <h1>Book Your Kashmir Tour for a Magical Snowy Escape!</h1>
+            <p>Revel in the joy of fresh snowfall this week as you explore the picturesque landscapes and experience the magic of winter. Hurry and book your dream getaway now for an unforgettable advertiture in the heart of snow-laden paradise!</p>
+            <a href="#packages" class="btn">Explore Now</a>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages">
+        <h2>Our Packages</h2>
+        <div class="package-container">
+            <div class="package">
+                <img src="https://www.travelhomekashmir.com/kashmir-tour-package/wp-content/uploads/2023/04/dal-lake-2.jpg" alt="Package.1">
+                <h3>5 Night 6 Days kashmir Package with Gulmarg Night stay</h3>
+                <p>Srinagar | Gulmarg | Pahalgam | Local- Sightseeing's.</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div class="package">
+                <img src="https://www.travelhomekashmir.com/kashmir-tour-package/wp-content/uploads/2023/04/group.jpg" alt="Beach Getaway">
+                <h3>Group Package Started From Srinagar</h3>
+                <p>Srinagar | Gulmarg | Pahalgam |Sonmarg | Local- Sightseeing's.</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div class="package">
+                <img src="https://www.travelhomekashmir.com/kashmir-tour-package/wp-content/uploads/2023/04/honeymoon2.jpg" alt="City Tour">
+                <h3>Honeymoon Package With doodhpathri</h3>
+                <p>Srinagar | Gulmarg | Pahalgam | Doodhpatheri..</p>
+                <button class="btn">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials">
+    <h2>What Our Travelers Say</h2>
+    <div class="testimonial-container">
+        <div class="testimonial">
+            <img src="https://www.travelhomekashmir.com/kashmir-tour-package/wp-content/uploads/2023/09/ChIJV64yijGP4TgRhF746smwrM8_4ac34d0f6c810db1c63fd189080b4544.jpg" alt="Priya">
+            <blockquote>"Great service by Kashmir Tour. Thank you Rayees sir. Can depend the responsive team (especially Ms. Farah) for clarity. Hotel accommodation and food were excellent comparing the package rate. Thank you once again. "</blockquote>
+            <p>- Priya</p>
+        </div>
+        <div class="testimonial">
+            <img src="https://www.travelhomekashmir.com/kashmir-tour-package/wp-content/uploads/2023/09/ChIJV64yijGP4TgRhF746smwrM8_fa24fdd881e1f03553d29c08733c1cbb.jpg" alt="Prachi Patil">
+            <blockquote>"We are finally back home from our trip and I would like to thank Safaa from "Adventure Travel" for organizing our trip considering all our requirements. We had a wonderful time at every destination and the hotels that we stayed in were very nice indeed. Hotel staff were kind and approachable.Drivers were good and careful and we had smooth transfers.Driver which was assigned to us for the last 3 days of our trip was very protective towards my mom considering her health issues .Once again, many thanks to Safaa and team for making such a trip possible.I will definitely recommend "Kashmir Tour" to my friends who are also planning trips to Kashmir."</blockquote>
+            <p>- Prachi Patil</p>
+        </div>
+        <div class="testimonial">
+            <img src="https://www.kashmirtourpackage.org/kashmir-package/reviews/r2.png" alt="Ankita Sonker">
+            <blockquote>"The trip went really Smooth. All thanks to the team of kashmir tour for coordinating. and understanding our requirements really well. Happy with my stay."</blockquote>
+            <p>- Ankita Sonker</p>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Signup Section -->
+<section id="newsletter" class="newsletter">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Get the latest travel deals and updates right in your inbox!</p>
+    <form class="newsletter-form" onsubmit="return validateForm()">
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn">Subscribe</button>
+    </form>
+
+
+</section>
+
+
+<!-- map section -->
+
+<div class="map">
+   
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3304.5272949784794!2d74.819502!3d34.08163!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e18f318a32ae57%3A0xcfacb0c9eaf85e84!2sTravel%20Home%20Kashmir!5e0!3m2!1sen!2sin!4v1727491195882!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</div>
+
+<!-- Scroll-to-Top Button -->
+<a href="#" class="scroll-top" id="scrollTopButton">&#8679;</a>
+
+
+
+<!-- Footer Section -->
+<section id="social-icons" class="social-icons">
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/" target="_main"><img src="https://cdn.pixabay.com/photo/2021/06/15/12/51/facebook-6338507_1280.png" alt="Facebook"
+                height="40"></a>
+            <a href="https://www.instagram.com/"target="_main"><img src="https://img.freepik.com/free-vector/instagram-background-gradient-colors_23-2147823814.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1727539200&semt=ais_hybrid" alt="Instagram"
+                height="40"></a>
+            <a href="https://x.com/"target="_main"><img src="https://img.freepik.com/premium-vector/twitter-new-logo-twitter-icons-new-twitter-logo-x-2023_929078-218.jpg" alt="Twitter"
+                height="40"></a>
+        </div>
+        <div class="contact-details"></div>
+            <p><strong>Contact Us:</strong></p>
+            <p>Email: info@kashmirtour.com</p>
+            <p>Phone: +91-9876543210</p>
+            <p>Address: 123, Kashmir Street, Srinagar, Jammu & Kashmir</p>
+        </div>
+        <p>&copy; 2024 Adventure Travel. All Rights Reserved.</p>
+    </footer>
+
+    
+</body>
+</html>

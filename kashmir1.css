@@ -1,0 +1,418 @@
+:root {
+    --primary-color: #ff6700; /* Main button color */
+    --secondary-color: #333; /* Footer and background color */
+    --light-color: #f4f4f4; /* Light background color */
+    --text-color: #fff; /* Text color */
+}
+
+
+
+
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+body {
+    line-height: 1.6;
+    background-color: var(--light-color); 
+}
+
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+}
+header {
+    background-color: rgba(51, 51, 51, 0.2);
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-links li {
+    margin: 0 15px;
+}
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+.nav-links a:hover {
+    color: #ff6700;
+}
+.toggle-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero-content {
+    max-width: 600px;
+}
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+.hero h1:hover {
+    transform: scale(1.05);
+}
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.btn {
+    padding: 10px 20px;
+    background-color: #ff6700;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.btn:hover, .btn:focus {
+    background-color: #e65c00;
+}
+
+/* Responsive Nav */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: rgba(51, 51, 51, 0.85);
+        border-radius: 5px;
+        padding: 10px;
+    }
+    .toggle-menu {
+        display: block;
+    }
+}
+
+/* live counter */
+
+.counter-section {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.counter-item {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #ff6a5a; 
+}
+
+.counter {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+
+
+   
+/* Packages Section */
+.packages {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.packages h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.package-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #e65c00;
+}
+
+.package {
+    background-color: #fff0f0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+.package img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.package h3 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.package p {
+    margin-bottom: 20px;
+}
+
+/* gallery section */
+
+.gallery {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+.gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+.modal {
+    position: fixed;
+    z-index: 10;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 50px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    color: #ff6700;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+    .package-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .package {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 24px;
+    }
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    margin-bottom: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial blockquote {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+/* Newsletter Section */
+.newsletter {
+    padding: 50px 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+.newsletter-form input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+}
+.newsletter-form button {
+    padding: 10px 20px;
+    background-color: #ff6700;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.newsletter-form button:hover {
+    background-color: #e65c00;
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #ff6700;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    display: none;
+    cursor: pointer;
+    z-index: 100;
+    transition: opacity 0.3s;
+}
+.scroll-top:hover {
+    background-color: #e65c00;
+}
+
+/* Map Section */
+.map {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Floating Call Button */
+.call-button i {
+    transform: rotate(91deg); /* Ensure no rotation */
+
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #fdeacc;
+    color: #ff4b4b; 
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.call-button a {
+    color: inherit;
+    font-size: 20px;
+}
+
+.call-button:hover {
+    background-color: #ffdbc1; 
+}
+
+
+/* Hover Effects for Package and Testimonial Cards */
+.package:hover, .testimonial:hover {
+    transform: translateY(-5px); /* Slightly lift the card */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Enhance shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}

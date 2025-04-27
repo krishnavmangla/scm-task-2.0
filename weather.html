@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Weather Update - Kashmir</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-blue-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-4 text-center">Live Weather Update - Kashmir</h1>
+        <div class="flex items-center justify-center mb-4">
+            <input id="cityInput" type="text" placeholder="Enter city name in Kashmir" class="border p-2 rounded-l-lg w-full">
+            <button id="getWeatherBtn" class="bg-blue-500 text-white p-2 rounded-r-lg hover:bg-blue-600">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div id="weatherInfo" class="text-center">
+            <p class="text-lg font-semibold" id="cityName"></p>
+            <p class="text-4xl font-bold" id="temperature"></p>
+            <p class="text-lg" id="weatherDescription"></p>
+            <img id="weatherIcon" src="" alt="Weather icon" class="mx-auto mt-4">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('getWeatherBtn').addEventListener('click', function() {
+            const city = document.getElementById('cityInput').value;
+            if (city) {
+                fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},IN&appid=YOUR_API_KEY&units=metric`)
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('cityName').textContent = data.name;
+                        document.getElementById('temperature').textContent = `${data.main.temp}°C`;
+                        document.getElementById('weatherDescription').textContent = data.weather[0].description;
+                        document.getElementById('weatherIcon').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+                        document.getElementById('weatherIcon').alt = `Icon representing ${data.weather[0].description}`;
+                    })
+                    .catch(error => {
+                        alert('City not found. Please try again.');
+                    });
+            } else {
+                alert('Please enter a city name.');
+            }
+        });
+    </script>
+</body>
+</html>
